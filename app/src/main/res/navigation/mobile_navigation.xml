@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/home_dest">
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.stevecampos.jetpackmvvm.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/detail_action"
+            app:destination="@+id/detail_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/signin_action"
+            app:destination="@+id/signin_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_dest"
+        android:name="com.stevecampos.jetpackmvvm.DetailFragment"
+        android:label="@string/detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="detailId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signin_dest"
+        android:name="com.stevecampos.jetpackmvvm.SigninFragment"
+        android:label="@string/signin"
+        tools:layout="@layout/fragment_signin" />
+
+
+</navigation>

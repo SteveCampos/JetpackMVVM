@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Jetpack MVVM</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="home">Home</string>
+    <string name="detail">Detalle</string>
+    <string name="signin">SignIn</string>
+</resources>
